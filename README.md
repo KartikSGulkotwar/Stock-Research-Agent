@@ -68,10 +68,15 @@ npm run dev:all
 - Frontend: http://localhost:3000
 - API: http://localhost:3001
 
+## Live Demo
+
+- **Frontend:** https://stock-research-agent-seven.vercel.app
+- **API:** https://stock-research-agent-production-366f.up.railway.app
+
 ## Usage
 
 ### Web UI:
-Open http://localhost:3000 and choose a mode:
+Open https://stock-research-agent-seven.vercel.app and choose a mode:
 
 **Analyze Mode:** Get detailed educational analysis of a single stock with AI agent debate view.
 **Compare Mode:** Compare 2-4 stocks side-by-side with radar charts and winner highlighting.
