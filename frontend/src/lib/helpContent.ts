@@ -1,0 +1,105 @@
+export const METRIC_HELP: Record<string, { brief: string; detail?: string }> = {
+  RSI: {
+    brief: 'Relative Strength Index: Measures if a stock is overbought (>70) or oversold (<30).',
+    detail: 'RSI is a momentum oscillator that ranges from 0 to 100. Values above 70 suggest a stock may be overbought and due for a pullback. Values below 30 suggest it may be oversold and due for a bounce. RSI is calculated using 14 periods of average gains and losses.',
+  },
+  MACD: {
+    brief: 'Moving Average Convergence Divergence: Shows momentum and trend direction.',
+    detail: 'MACD is calculated by subtracting the 26-period EMA from the 12-period EMA. A signal line (9-period EMA of MACD) is used for crossover signals. When MACD crosses above the signal line, it\'s a bullish signal; below is bearish.',
+  },
+  'P/E Ratio': {
+    brief: 'Price-to-Earnings: How much investors pay per dollar of earnings.',
+    detail: 'P/E Ratio divides the stock price by earnings per share. A high P/E (>30) may indicate overvaluation or high growth expectations. A low P/E (<15) may indicate undervaluation or declining growth. Compare within the same sector for meaningful analysis.',
+  },
+  Beta: {
+    brief: 'Market sensitivity: >1 means more volatile than the market.',
+    detail: 'Beta measures a stock\'s volatility relative to the overall market (S&P 500 = 1.0). A beta of 1.5 means the stock moves 50% more than the market. Beta <1 is less volatile, >1 is more volatile. Useful for assessing portfolio risk.',
+  },
+  'Market Cap': {
+    brief: 'Total market value of outstanding shares.',
+    detail: 'Market Cap = Share Price × Total Shares Outstanding. Mega cap (>$200B), Large cap ($10B-$200B), Mid cap ($2B-$10B), Small cap ($300M-$2B), Micro cap (<$300M). Larger caps tend to be more stable.',
+  },
+  'Moving Average': {
+    brief: 'Average price over a time period, smooths out volatility.',
+    detail: 'Moving Averages (MA) smooth price data to identify trends. MA20 is short-term, MA50 is medium-term, MA200 is long-term. When price is above the MA, the trend is bullish; below is bearish. "Golden Cross" (MA50 crosses above MA200) is a strong bullish signal.',
+  },
+  'Bollinger Bands': {
+    brief: 'Price volatility bands showing 2 standard deviations from the mean.',
+    detail: 'Bollinger Bands consist of a middle band (20-period SMA) with upper and lower bands at 2 standard deviations. When price touches the upper band, it may be overbought. When it touches the lower band, it may be oversold. Band width indicates volatility.',
+  },
+  'Confidence': {
+    brief: 'How strong the AI analysis signals are — higher means more agreement among indicators.',
+    detail: 'Confidence is calculated from the agreement between technical, fundamental, and sentiment signals. A 90%+ confidence means nearly all indicators point the same direction. 50-70% is moderate and may warrant more research.',
+  },
+  'Signal Strength': {
+    brief: 'Intensity of the directional signal: Strong, Moderate, or Weak.',
+    detail: 'Strong signals have high confidence with multiple confirming indicators. Moderate signals have some disagreement but a clear lean. Weak signals have significant disagreement and should be interpreted cautiously.',
+  },
+  'Fair Value': {
+    brief: 'AI-estimated fair price based on fundamentals and comparable analysis.',
+    detail: 'Fair Value is an estimate, not a guarantee. It combines DCF analysis, peer comparison, and analyst consensus to approximate what the stock might be worth. Actual prices are determined by supply and demand and may deviate significantly.',
+  },
+  'Technical Support': {
+    brief: 'Price level where buying interest has historically prevented further decline.',
+    detail: 'Support levels are identified from historical price action, moving averages, and Fibonacci retracements. If price drops below support, it may accelerate further downside. Support often coincides with round numbers or previous lows.',
+  },
+  'Dividend Yield': {
+    brief: 'Annual dividend as a percentage of the stock price.',
+    detail: 'Dividend Yield = Annual Dividend / Stock Price × 100. Higher yields can provide income but may also signal a declining stock price. Compare yields within the same sector. Yields above 6-7% may be unsustainable.',
+  },
+  'Debt/Equity': {
+    brief: 'Company leverage: debt relative to shareholder equity.',
+    detail: 'Debt/Equity Ratio measures financial leverage. A ratio above 2 indicates high leverage and increased risk. Below 0.5 is conservative. Compare within the same industry as some sectors (utilities, REITs) naturally carry more debt.',
+  },
+  'EPS': {
+    brief: 'Earnings Per Share: Company profit divided by outstanding shares.',
+    detail: 'EPS = Net Income / Shares Outstanding. Growing EPS is generally positive. Compare year-over-year and quarter-over-quarter changes. "Earnings beats" (actual EPS > expected) often drive positive price action.',
+  },
+  'Profit Margin': {
+    brief: 'Percentage of revenue that becomes profit.',
+    detail: 'Profit Margin = Net Income / Revenue × 100. Higher margins indicate pricing power and efficiency. Tech companies often have 20%+ margins while retail may be 2-5%. Expanding margins are a positive signal.',
+  },
+};
+
+export const STOCK_SYMBOLS: { symbol: string; name: string; sector: string }[] = [
+  { symbol: 'AAPL', name: 'Apple Inc.', sector: 'Technology' },
+  { symbol: 'MSFT', name: 'Microsoft Corp.', sector: 'Technology' },
+  { symbol: 'GOOGL', name: 'Alphabet Inc.', sector: 'Technology' },
+  { symbol: 'AMZN', name: 'Amazon.com Inc.', sector: 'Consumer' },
+  { symbol: 'NVDA', name: 'NVIDIA Corp.', sector: 'Technology' },
+  { symbol: 'TSLA', name: 'Tesla Inc.', sector: 'Consumer' },
+  { symbol: 'META', name: 'Meta Platforms', sector: 'Technology' },
+  { symbol: 'JPM', name: 'JPMorgan Chase', sector: 'Financials' },
+  { symbol: 'V', name: 'Visa Inc.', sector: 'Financials' },
+  { symbol: 'JNJ', name: 'Johnson & Johnson', sector: 'Healthcare' },
+  { symbol: 'WMT', name: 'Walmart Inc.', sector: 'Consumer' },
+  { symbol: 'PG', name: 'Procter & Gamble', sector: 'Consumer' },
+  { symbol: 'UNH', name: 'UnitedHealth Group', sector: 'Healthcare' },
+  { symbol: 'HD', name: 'Home Depot', sector: 'Consumer' },
+  { symbol: 'MA', name: 'Mastercard Inc.', sector: 'Financials' },
+  { symbol: 'DIS', name: 'Walt Disney Co.', sector: 'Communication' },
+  { symbol: 'NFLX', name: 'Netflix Inc.', sector: 'Communication' },
+  { symbol: 'ADBE', name: 'Adobe Inc.', sector: 'Technology' },
+  { symbol: 'CRM', name: 'Salesforce Inc.', sector: 'Technology' },
+  { symbol: 'PYPL', name: 'PayPal Holdings', sector: 'Financials' },
+  { symbol: 'AMD', name: 'Advanced Micro Devices', sector: 'Technology' },
+  { symbol: 'INTC', name: 'Intel Corp.', sector: 'Technology' },
+  { symbol: 'BAC', name: 'Bank of America', sector: 'Financials' },
+  { symbol: 'XOM', name: 'Exxon Mobil', sector: 'Energy' },
+  { symbol: 'CVX', name: 'Chevron Corp.', sector: 'Energy' },
+  { symbol: 'KO', name: 'Coca-Cola Co.', sector: 'Consumer' },
+  { symbol: 'PEP', name: 'PepsiCo Inc.', sector: 'Consumer' },
+  { symbol: 'ABBV', name: 'AbbVie Inc.', sector: 'Healthcare' },
+  { symbol: 'MRK', name: 'Merck & Co.', sector: 'Healthcare' },
+  { symbol: 'LLY', name: 'Eli Lilly & Co.', sector: 'Healthcare' },
+  { symbol: 'GS', name: 'Goldman Sachs', sector: 'Financials' },
+  { symbol: 'MS', name: 'Morgan Stanley', sector: 'Financials' },
+  { symbol: 'WFC', name: 'Wells Fargo', sector: 'Financials' },
+  { symbol: 'T', name: 'AT&T Inc.', sector: 'Communication' },
+  { symbol: 'NKE', name: 'Nike Inc.', sector: 'Consumer' },
+  { symbol: 'COST', name: 'Costco Wholesale', sector: 'Consumer' },
+  { symbol: 'MCD', name: 'McDonald\'s Corp.', sector: 'Consumer' },
+  { symbol: 'COP', name: 'ConocoPhillips', sector: 'Energy' },
+  { symbol: 'SLB', name: 'Schlumberger Ltd.', sector: 'Energy' },
+  { symbol: 'LMT', name: 'Lockheed Martin', sector: 'Industrials' },
+];
