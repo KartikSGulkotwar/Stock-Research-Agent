@@ -71,7 +71,7 @@ npm run dev:all
 ## Live Demo
 
 - **Frontend:** https://stock-research-agent-seven.vercel.app
-- **API:** https://stock-research-agent-production-366f.up.railway.app
+- **API:** https://stock-research-agent-api.vercel.app
 
 ## Usage
 
