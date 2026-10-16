@@ -302,10 +302,10 @@ export default function StockScreener() {
       `}</style>
 
       {/* Header */}
-      <div className="rounded-2xl p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
+      <div className="rounded-2xl p-4 sm:p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
         <div className="flex items-center gap-2 mb-2">
           <Filter className="w-6 h-6" style={{ color: 'var(--accent)' }} />
-          <h2 className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>Stock Screener</h2>
+          <h2 className="text-xl sm:text-2xl font-bold whitespace-nowrap" style={{ color: 'var(--text-primary)' }}>Stock Screener</h2>
         </div>
         <p className="text-xs mb-4" style={{ color: 'var(--text-dimmed)' }}>
           Screen stocks by sector or custom lists. Data for educational purposes only.

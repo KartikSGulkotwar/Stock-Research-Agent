@@ -108,7 +108,7 @@ export default function Home() {
       <div className="container mx-auto px-4 py-6">
 
         {/* === TOP NAVIGATION BAR === */}
-        <div className="flex items-center justify-between mb-6 gap-3">
+        <div className="flex items-center justify-between mb-4 sm:mb-6 gap-3">
           {/* Logo / Brand */}
           <div className="flex items-center gap-2.5">
             <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: 'var(--accent-muted)' }}>
@@ -130,7 +130,7 @@ export default function Home() {
         </div>
 
         {/* Educational Disclaimer Banner */}
-        <div className="max-w-3xl mx-auto mb-6">
+        <div className="max-w-3xl mx-auto mb-5 sm:mb-6">
           <div className="rounded-xl px-4 py-3 flex items-start gap-3" style={{ background: 'rgba(234, 179, 8, 0.06)', border: '1px solid rgba(234, 179, 8, 0.2)' }}>
             <Shield className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
             <div className="flex-1">
@@ -142,8 +142,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* === MODE TABS === */}
-        <div className="flex justify-center mb-8">
+        {/* === MODE TABS (tablet/desktop) === */}
+        <div className="hidden sm:flex justify-center mb-8">
           <div className="inline-flex items-center gap-1 p-1 rounded-2xl" style={{ background: 'var(--bg-input)', border: '1px solid var(--border-color)' }}>
             {TAB_CONFIG.map(({ mode: m, icon: Icon, label }, idx) => (
               <button
@@ -164,6 +164,30 @@ export default function Home() {
             ))}
           </div>
         </div>
+
+        {/* === MODE TABS (phone: bottom tab bar) === */}
+        <nav
+          className="mobile-tabbar sm:hidden fixed bottom-0 inset-x-0 z-40 grid grid-cols-7 px-1 pt-1.5"
+          style={{ background: 'var(--bg-card)', borderTop: '1px solid var(--border-color)' }}
+        >
+          {TAB_CONFIG.map(({ mode: m, icon: Icon, label }) => (
+            <button
+              key={m}
+              onClick={() => setMode(m)}
+              aria-current={mode === m ? 'page' : undefined}
+              className="flex flex-col items-center gap-1 py-1 rounded-xl text-[10px] font-medium"
+              style={{ color: mode === m ? 'var(--accent)' : 'var(--text-muted)' }}
+            >
+              <span
+                className="flex items-center justify-center w-10 h-7 rounded-full"
+                style={{ background: mode === m ? 'var(--accent-muted)' : 'transparent' }}
+              >
+                <Icon className="w-5 h-5" />
+              </span>
+              {label}
+            </button>
+          ))}
+        </nav>
 
         {/* === PAGE CONTENT === */}
         <div className="animate-fadeIn" key={mode}>
@@ -210,6 +234,7 @@ export default function Home() {
             <Link href="/terms" className="underline" style={{ color: 'var(--text-muted)' }}>Terms of Service</Link>
           </p>
         </div>
+        <div className="mobile-tabbar-spacer sm:hidden" />
       </div>
     </main>
   );

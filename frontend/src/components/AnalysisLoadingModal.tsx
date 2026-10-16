@@ -9,12 +9,12 @@ interface AnalysisLoadingModalProps {
 }
 
 const AGENTS = [
-  { id: 'data', name: 'Data Collector', icon: Database, desc: 'Fetching price data & fundamentals', color: '#60a5fa', duration: 5000 },
-  { id: 'technical', name: 'Technical Analyzer', icon: TrendingUp, desc: 'RSI, MACD, Moving Averages', color: '#3b82f6', duration: 8000 },
+  { id: 'data', name: 'Data Collector', icon: Database, desc: 'Fetching price data & fundamentals', color: '#c084fc', duration: 5000 },
+  { id: 'technical', name: 'Technical Analyzer', icon: TrendingUp, desc: 'RSI, MACD, Moving Averages', color: '#a855f7', duration: 8000 },
   { id: 'fundamental', name: 'Fundamental Analyzer', icon: DollarSign, desc: 'P/E, EPS, Profit Margins', color: '#10b981', duration: 12000 },
   { id: 'sentiment', name: 'Sentiment Analyzer', icon: Newspaper, desc: 'News & market sentiment', color: '#f59e0b', duration: 18000 },
   { id: 'risk', name: 'Risk Assessor', icon: AlertTriangle, desc: 'Volatility & risk factors', color: '#ef4444', duration: 24000 },
-  { id: 'coordinator', name: 'Coordinator', icon: Brain, desc: 'Synthesizing all findings', color: '#8b5cf6', duration: 35000 },
+  { id: 'coordinator', name: 'Coordinator', icon: Brain, desc: 'Synthesizing all findings', color: '#e879f9', duration: 35000 },
 ];
 
 export default function AnalysisLoadingModal({ symbol, isActive }: AnalysisLoadingModalProps) {

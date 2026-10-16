@@ -36,7 +36,7 @@ function getScoreSubtext(type: string, score: number): string {
 
 export default function EnhancedScoreDisplay({ technical, fundamental, sentiment }: EnhancedScoreDisplayProps) {
   const scores = [
-    { name: 'Technical', score: technical, fill: '#3b82f6', helpTerm: 'Technical Score', helpBrief: 'Composite score from RSI, MACD, Moving Averages, and Bollinger Bands analysis.' },
+    { name: 'Technical', score: technical, fill: '#a855f7', helpTerm: 'Technical Score', helpBrief: 'Composite score from RSI, MACD, Moving Averages, and Bollinger Bands analysis.' },
     { name: 'Fundamental', score: fundamental, fill: '#10b981', helpTerm: 'Fundamental Score', helpBrief: 'Composite score from P/E ratio, EPS growth, profit margins, and debt levels.' },
     { name: 'Sentiment', score: sentiment, fill: '#f59e0b', helpTerm: 'Sentiment Score', helpBrief: 'Composite score from news sentiment, analyst ratings, and market mood.' },
   ];
@@ -50,7 +50,7 @@ export default function EnhancedScoreDisplay({ technical, fundamental, sentiment
     : 'No strong scores — weak consensus';
 
   return (
-    <div className="rounded-2xl p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
+    <div className="rounded-2xl p-4 sm:p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold" style={{ color: 'var(--text-primary)' }}>Analysis Scores</h3>
         <span className="text-xs px-2 py-1 rounded-full" style={{ background: 'var(--bg-badge)', color: 'var(--text-muted)' }}>

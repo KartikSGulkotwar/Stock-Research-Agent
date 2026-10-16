@@ -53,7 +53,7 @@ export default function KeyInsightsCards({ findings, direction, confidence, tech
     : `Mixed signals suggest patience. ${avgScore > 50 ? 'Slight lean positive on balance.' : 'Wait for clearer direction before acting.'}`;
 
   return (
-    <div className="rounded-2xl p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
+    <div className="rounded-2xl p-4 sm:p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
       <h3 className="text-lg font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>Key Insights</h3>
 
       <div className="grid sm:grid-cols-2 gap-4 mb-4">

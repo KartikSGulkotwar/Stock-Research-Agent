@@ -101,7 +101,7 @@ export default function ShareCard({
             {/* Card Preview */}
             <div
               id="share-card"
-              className="rounded-2xl p-6"
+              className="rounded-2xl p-4 sm:p-6"
               style={{ background: 'var(--bg-card)', border: `2px solid ${colors.border}` }}
             >
               <div className="flex items-center justify-between mb-4">

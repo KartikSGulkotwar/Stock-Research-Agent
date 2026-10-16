@@ -28,7 +28,7 @@ export default function AnalysisProgress({ progress, activeAgents }: { progress:
         <h3 className="font-semibold text-slate-200 mb-3">Active agents</h3>
         <div className="flex flex-wrap gap-2">
           {agents.map((agent) => (
-            <div key={agent} className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium ${activeAgents.includes(agent) ? 'bg-blue-500/30 text-blue-200 border border-blue-400/50' : 'bg-slate-700/50 text-slate-400 border border-slate-600'}`}>
+            <div key={agent} className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium ${activeAgents.includes(agent) ? 'bg-violet-500/30 text-violet-200 border border-violet-400/50' : 'bg-slate-700/50 text-slate-400 border border-slate-600'}`}>
               {icons[agent]}
               {labels[agent]}
             </div>

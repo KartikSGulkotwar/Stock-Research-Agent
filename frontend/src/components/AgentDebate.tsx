@@ -12,11 +12,11 @@ interface AgentDebateProps {
 }
 
 const agentProfiles = {
-  technical: { name: 'Technical Analyst', icon: TrendingUp, color: '#3b82f6', emoji: '' },
+  technical: { name: 'Technical Analyst', icon: TrendingUp, color: '#a855f7', emoji: '' },
   fundamental: { name: 'Fundamental Analyst', icon: DollarSign, color: '#10b981', emoji: '' },
   sentiment: { name: 'Sentiment Analyst', icon: Newspaper, color: '#f59e0b', emoji: '' },
   risk: { name: 'Risk Assessor', icon: AlertTriangle, color: '#ef4444', emoji: '' },
-  coordinator: { name: 'Coordinator', icon: Brain, color: '#8b5cf6', emoji: '' },
+  coordinator: { name: 'Coordinator', icon: Brain, color: '#e879f9', emoji: '' },
 };
 
 function getStance(score: number | undefined, label?: string): 'bullish' | 'bearish' | 'neutral' {
@@ -111,7 +111,7 @@ export default function AgentDebate({ symbol, technical, fundamental, sentiment,
   });
 
   return (
-    <div className="rounded-2xl p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
+    <div className="rounded-2xl p-4 sm:p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
       <h3 className="text-lg font-semibold mb-1" style={{ color: 'var(--text-primary)' }}>Agent Debate</h3>
       <p className="text-xs mb-5" style={{ color: 'var(--text-dimmed)' }}>Watch the 6 AI agents discuss their findings on {symbol}</p>
 

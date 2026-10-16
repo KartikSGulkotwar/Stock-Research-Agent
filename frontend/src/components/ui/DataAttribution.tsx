@@ -10,10 +10,10 @@ interface DataAttributionProps {
 }
 
 const SOURCE_INFO = {
-  prices: { icon: BarChart3, label: 'Prices: Yahoo Finance (15min delay)', color: '#3b82f6' },
+  prices: { icon: BarChart3, label: 'Prices: Yahoo Finance (15min delay)', color: '#a855f7' },
   news: { icon: Newspaper, label: 'News: NewsAPI', color: '#f59e0b' },
   fundamentals: { icon: Database, label: 'Fundamentals: FMP API', color: '#10b981' },
-  analysts: { icon: Star, label: 'Analysts: Third-party consensus', color: '#8b5cf6' },
+  analysts: { icon: Star, label: 'Analysts: Third-party consensus', color: '#e879f9' },
 };
 
 export default function DataAttribution({ lastUpdated, onRefresh, loading, sources = ['prices', 'fundamentals'] }: DataAttributionProps) {

@@ -219,7 +219,7 @@ export default function Watchlist() {
       )}
 
       {/* Add to Watchlist */}
-      <div className="rounded-2xl p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
+      <div className="rounded-2xl p-4 sm:p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
         <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
           <Star className="w-5 h-5" style={{ color: 'var(--accent)' }} /> Watchlist
         </h3>
@@ -229,7 +229,7 @@ export default function Watchlist() {
             onChange={e => setNewSymbol(e.target.value.toUpperCase())}
             onKeyDown={e => e.key === 'Enter' && addSymbol()}
             placeholder="Add symbol (e.g. TSLA)"
-            className="flex-1 max-w-xs px-3 py-2 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-1 max-w-xs px-3 py-2 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-violet-500"
             style={{ background: 'var(--bg-input)', border: '1px solid var(--border-color)', color: 'var(--text-primary)' }}
           />
           <button
@@ -421,7 +421,7 @@ export default function Watchlist() {
                       <div className="flex items-center gap-3">
                         <span className="text-xs w-24 text-right flex-shrink-0" style={{ color: 'var(--text-muted)' }}>Technical</span>
                         <div className="flex-1">
-                          <ProgressBar value={analysis.technical_score} max={100} height={6} color="#3b82f6" showLabel />
+                          <ProgressBar value={analysis.technical_score} max={100} height={6} color="#a855f7" showLabel />
                         </div>
                       </div>
                       <div className="flex items-center gap-3">

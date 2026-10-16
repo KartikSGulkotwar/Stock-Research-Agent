@@ -2,31 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Default theme (current dark blue gradient) */
+/* Default theme (dark purple gradient) */
 :root,
 [data-theme="default"] {
-  --bg-page: linear-gradient(to bottom right, #0f172a, #1e3a8a, #0f172a);
-  --bg-card: rgba(30, 41, 59, 0.6);
-  --bg-card-hover: rgba(30, 41, 59, 0.8);
-  --bg-input: rgba(51, 65, 85, 0.8);
-  --bg-badge: rgba(51, 65, 85, 0.5);
-  --bg-icon: rgba(51, 65, 85, 0.8);
+  --bg-page: linear-gradient(to bottom right, #120a24, #4c1d95, #120a24);
+  --bg-card: rgba(39, 26, 66, 0.6);
+  --bg-card-hover: rgba(39, 26, 66, 0.8);
+  --bg-input: rgba(62, 45, 98, 0.8);
+  --bg-badge: rgba(62, 45, 98, 0.5);
+  --bg-icon: rgba(62, 45, 98, 0.8);
   --bg-overlay: rgba(0, 0, 0, 0.6);
   --text-primary: #ffffff;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
-  --text-dimmed: #64748b;
-  --border-color: rgba(71, 85, 105, 0.6);
-  --border-divider: rgba(71, 85, 105, 0.4);
-  --accent: #60a5fa;
-  --accent-hover: #3b82f6;
-  --accent-muted: rgba(96, 165, 250, 0.15);
-  --chart-axis: #94a3b8;
-  --tooltip-bg: #1e293b;
-  --tooltip-border: #475569;
-  --active-badge-bg: rgba(59, 130, 246, 0.3);
-  --active-badge-text: #bfdbfe;
-  --active-badge-border: rgba(96, 165, 250, 0.5);
+  --text-secondary: #ddd6fe;
+  --text-muted: #b4a7d6;
+  --text-dimmed: #8576a8;
+  --border-color: rgba(109, 86, 160, 0.5);
+  --border-divider: rgba(109, 86, 160, 0.3);
+  --accent: #a78bfa;
+  --accent-hover: #8b5cf6;
+  --accent-muted: rgba(167, 139, 250, 0.15);
+  --chart-axis: #b4a7d6;
+  --tooltip-bg: #2a1b4a;
+  --tooltip-border: #5b4691;
+  --active-badge-bg: rgba(139, 92, 246, 0.3);
+  --active-badge-text: #ddd6fe;
+  --active-badge-border: rgba(167, 139, 250, 0.5);
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.12);
   --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.2);
   --shadow-dropdown: 0 16px 48px rgba(0, 0, 0, 0.3);
@@ -47,15 +47,15 @@
   --text-dimmed: #525252;
   --border-color: #2a2a2a;
   --border-divider: #222222;
-  --accent: #60a5fa;
-  --accent-hover: #3b82f6;
-  --accent-muted: rgba(96, 165, 250, 0.1);
+  --accent: #a78bfa;
+  --accent-hover: #8b5cf6;
+  --accent-muted: rgba(167, 139, 250, 0.1);
   --chart-axis: #737373;
   --tooltip-bg: #1a1a1a;
   --tooltip-border: #333333;
-  --active-badge-bg: rgba(59, 130, 246, 0.2);
-  --active-badge-text: #93c5fd;
-  --active-badge-border: rgba(59, 130, 246, 0.4);
+  --active-badge-bg: rgba(139, 92, 246, 0.2);
+  --active-badge-text: #c4b5fd;
+  --active-badge-border: rgba(139, 92, 246, 0.4);
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.2);
   --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.35);
   --shadow-dropdown: 0 16px 48px rgba(0, 0, 0, 0.5);
@@ -76,15 +76,15 @@
   --text-dimmed: #9ca3af;
   --border-color: #d6d3ce;
   --border-divider: #e5e2dd;
-  --accent: #2563eb;
-  --accent-hover: #1d4ed8;
-  --accent-muted: rgba(37, 99, 235, 0.08);
+  --accent: #7c3aed;
+  --accent-hover: #6d28d9;
+  --accent-muted: rgba(124, 58, 237, 0.08);
   --chart-axis: #6b7280;
   --tooltip-bg: #ffffff;
   --tooltip-border: #d6d3ce;
-  --active-badge-bg: rgba(37, 99, 235, 0.1);
-  --active-badge-text: #1d4ed8;
-  --active-badge-border: rgba(37, 99, 235, 0.3);
+  --active-badge-bg: rgba(124, 58, 237, 0.1);
+  --active-badge-text: #6d28d9;
+  --active-badge-border: rgba(124, 58, 237, 0.3);
   --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.06);
   --shadow-card-hover: 0 8px 32px rgba(0, 0, 0, 0.1);
   --shadow-dropdown: 0 12px 40px rgba(0, 0, 0, 0.12);
@@ -149,8 +149,8 @@ body {
 }
 
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 4px rgba(96, 165, 250, 0.2); }
-  50% { box-shadow: 0 0 16px rgba(96, 165, 250, 0.4); }
+  0%, 100% { box-shadow: 0 0 4px rgba(167, 139, 250, 0.2); }
+  50% { box-shadow: 0 0 16px rgba(167, 139, 250, 0.4); }
 }
 
 .animate-fadeIn {
@@ -260,7 +260,7 @@ button, a, input, select {
 }
 .btn-primary:hover {
   background: var(--accent-hover);
-  box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
+  box-shadow: 0 4px 12px rgba(167, 139, 250, 0.3);
 }
 
 .btn-secondary {
@@ -285,7 +285,7 @@ button, a, input, select {
   background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(239, 68, 68, 0.05) 100%);
 }
 .gradient-info {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0.05) 100%);
 }
 .gradient-accent {
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
@@ -398,7 +398,36 @@ button, a, input, select {
 }
 
 /* ===== RESPONSIVE ===== */
+html {
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+  padding-top: env(safe-area-inset-top);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Bottom tab bar on phones: sits above the iPhone home indicator */
+.mobile-tabbar {
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.mobile-tabbar-spacer {
+  height: calc(4.5rem + env(safe-area-inset-bottom));
+}
+
 @media (max-width: 640px) {
+  /* iOS Safari zooms in on focus when inputs are under 16px */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+  .modal-backdrop {
+    padding: max(0.75rem, env(safe-area-inset-top)) 0.75rem max(0.75rem, env(safe-area-inset-bottom));
+  }
   .card-hover:hover {
     transform: none;
   }

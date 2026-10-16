@@ -32,7 +32,7 @@ export default function RecommendationCard({ symbol, price, targetPrice, stopLos
   const recLabel = directionLabels[direction] || 'Neutral';
 
   return (
-    <div className="rounded-2xl p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
+    <div className="rounded-2xl p-4 sm:p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
       <h3 className="text-lg font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>Price Levels</h3>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         <div>

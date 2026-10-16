@@ -4,7 +4,7 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 
 
 export default function ScoreChart({ technical, fundamental, sentiment }: { technical: number; fundamental: number; sentiment: number }) {
   const data = [
-    { name: 'Technical', score: technical, fill: '#3b82f6' },
+    { name: 'Technical', score: technical, fill: '#a855f7' },
     { name: 'Fundamental', score: fundamental, fill: '#10b981' },
     { name: 'Sentiment', score: sentiment, fill: '#f59e0b' },
   ];

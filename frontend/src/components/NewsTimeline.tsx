@@ -54,7 +54,7 @@ export default function NewsTimeline({ symbol }: { symbol: string }) {
   const shown = expanded ? articles : articles.slice(0, 5);
 
   return (
-    <div className="rounded-2xl p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
+    <div className="rounded-2xl p-4 sm:p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
       <h3 className="text-lg font-semibold mb-1 flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
         <Newspaper className="w-5 h-5" style={{ color: 'var(--accent)' }} />
         Recent News

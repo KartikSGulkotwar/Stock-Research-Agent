@@ -13,7 +13,7 @@ const VARIANT_STYLES: Record<BadgeVariant, { bg: string; text: string; dot: stri
   success: { bg: 'rgba(16, 185, 129, 0.15)', text: '#10b981', dot: '#10b981' },
   warning: { bg: 'rgba(245, 158, 11, 0.15)', text: '#f59e0b', dot: '#f59e0b' },
   danger: { bg: 'rgba(239, 68, 68, 0.15)', text: '#ef4444', dot: '#ef4444' },
-  info: { bg: 'rgba(59, 130, 246, 0.15)', text: '#60a5fa', dot: '#60a5fa' },
+  info: { bg: 'rgba(168, 85, 247, 0.15)', text: '#c084fc', dot: '#c084fc' },
   neutral: { bg: 'var(--bg-badge)', text: 'var(--text-muted)', dot: 'var(--text-dimmed)' },
 };
 

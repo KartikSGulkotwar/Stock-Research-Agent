@@ -71,7 +71,7 @@ export default function MarketOverview() {
     return (
       <div className="max-w-5xl mx-auto space-y-6">
         <div
-          className="rounded-2xl p-6 animate-pulse"
+          className="rounded-2xl p-4 sm:p-6 animate-pulse"
           style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}
         >
           <div className="flex items-center gap-3 mb-4">
@@ -101,7 +101,7 @@ export default function MarketOverview() {
           {[...Array(2)].map((_, i) => (
             <div
               key={i}
-              className="rounded-2xl p-6 animate-pulse"
+              className="rounded-2xl p-4 sm:p-6 animate-pulse"
               style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}
             >
               <div className="h-4 w-36 rounded mb-4" style={{ background: 'var(--bg-input)' }} />
@@ -130,13 +130,13 @@ export default function MarketOverview() {
 
       {/* Header */}
       <div
-        className="rounded-2xl p-6 market-card-enter"
+        className="rounded-2xl p-4 sm:p-6 market-card-enter"
         style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}
       >
-        <div className="flex items-center justify-between mb-2">
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-2">
           <div className="flex items-center gap-2">
             <Globe className="w-6 h-6" style={{ color: 'var(--accent)' }} />
-            <h2 className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>Market Overview</h2>
+            <h2 className="text-xl sm:text-2xl font-bold whitespace-nowrap" style={{ color: 'var(--text-primary)' }}>Market Overview</h2>
           </div>
           <div className="flex items-center gap-3">
             {lastUpdated && (
@@ -263,7 +263,7 @@ export default function MarketOverview() {
         {/* Sector Performance - Enhanced Heatmap */}
         {sectors.length > 0 && (
           <div
-            className="rounded-2xl p-6 market-card-enter"
+            className="rounded-2xl p-4 sm:p-6 market-card-enter"
             style={{
               background: 'var(--bg-card)',
               border: '1px solid var(--border-color)',

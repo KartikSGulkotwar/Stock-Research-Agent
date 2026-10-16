@@ -22,7 +22,7 @@ export default function AnalysisForm({ onAnalyze, isAnalyzing }: { onAnalyze: (s
             value={symbol}
             onChange={(e) => setSymbol(e.target.value.toUpperCase())}
             placeholder="Enter symbol (e.g. TSLA)"
-            className="w-full pl-12 pr-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full pl-12 pr-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-500"
             style={{ background: 'var(--bg-input)', border: '1px solid var(--border-color)', color: 'var(--text-primary)' }}
             disabled={isAnalyzing}
           />

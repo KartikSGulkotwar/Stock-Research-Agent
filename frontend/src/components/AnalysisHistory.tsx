@@ -319,13 +319,13 @@ export default function AnalysisHistory() {
             label="Total Analyses"
             value={dashboardStats.totalAnalyses}
             sub={`across ${dashboardStats.uniqueStocks} stock${dashboardStats.uniqueStocks !== 1 ? 's' : ''}`}
-            color="#6366f1"
+            color="#7c3aed"
           />
           <StatCard
             icon={PieChart}
             label="Unique Stocks"
             value={dashboardStats.uniqueStocks}
-            color="#8b5cf6"
+            color="#e879f9"
           />
           <StatCard
             icon={Percent}
@@ -456,7 +456,7 @@ export default function AnalysisHistory() {
       {/* ============ Selected Symbol Detail ============ */}
       {selectedSymbol && (
         <div
-          className="rounded-2xl p-6 animate-fadeIn"
+          className="rounded-2xl p-4 sm:p-6 animate-fadeIn"
           style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}
         >
           <div className="flex items-center justify-between mb-4">
@@ -531,7 +531,7 @@ export default function AnalysisHistory() {
                           value={entry.technical_score}
                           max={10}
                           height={6}
-                          color="#3b82f6"
+                          color="#a855f7"
                           label="Technical"
                           showLabel
                         />

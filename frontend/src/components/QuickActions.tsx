@@ -8,11 +8,11 @@ interface QuickActionsProps {
 }
 
 const ACTIONS = [
-  { key: 'analyze', label: 'Analyze a stock', desc: 'Run full AI analysis', icon: Search, shortcut: '1', color: '#60a5fa' },
-  { key: 'compare', label: 'Compare stocks', desc: 'Side-by-side comparison', icon: BarChart3, shortcut: '2', color: '#8b5cf6' },
+  { key: 'analyze', label: 'Analyze a stock', desc: 'Run full AI analysis', icon: Search, shortcut: '1', color: '#c084fc' },
+  { key: 'compare', label: 'Compare stocks', desc: 'Side-by-side comparison', icon: BarChart3, shortcut: '2', color: '#e879f9' },
   { key: 'watchlist', label: 'View watchlist', desc: 'Tracked stocks & alerts', icon: Star, shortcut: '4', color: '#f59e0b' },
   { key: 'market', label: 'Market overview', desc: 'Indices, sectors, movers', icon: Globe, shortcut: '6', color: '#10b981' },
-  { key: 'portfolio', label: 'Check portfolio', desc: 'Hypothetical positions', icon: Briefcase, shortcut: '5', color: '#3b82f6' },
+  { key: 'portfolio', label: 'Check portfolio', desc: 'Hypothetical positions', icon: Briefcase, shortcut: '5', color: '#a855f7' },
   { key: 'screener', label: 'Run stock screen', desc: 'Filter by criteria', icon: Filter, shortcut: '7', color: '#ec4899' },
 ];
 

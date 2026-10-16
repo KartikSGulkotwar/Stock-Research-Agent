@@ -13,3 +13,4 @@ frontend/out/
 .idea/
 .claude/
 resume-output/
+*.tsbuildinfo

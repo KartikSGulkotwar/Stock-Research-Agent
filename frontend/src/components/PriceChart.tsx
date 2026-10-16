@@ -71,7 +71,7 @@ export default function PriceChart({ symbol }: { symbol: string }) {
 
   if (loading) {
     return (
-      <div className="rounded-2xl p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
+      <div className="rounded-2xl p-4 sm:p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
         <div className="flex items-center gap-2 mb-4">
           <CandlestickChart className="w-5 h-5" style={{ color: 'var(--accent)' }} />
           <h3 className="text-lg font-semibold" style={{ color: 'var(--text-primary)' }}>Price Chart</h3>
@@ -89,7 +89,7 @@ export default function PriceChart({ symbol }: { symbol: string }) {
   const formatVol = (v: number) => v >= 1e6 ? `${(v / 1e6).toFixed(1)}M` : `${(v / 1e3).toFixed(0)}K`;
 
   return (
-    <div className="rounded-2xl p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
+    <div className="rounded-2xl p-4 sm:p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
       {/* Header */}
       <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
         <div className="flex items-center gap-2">
@@ -168,8 +168,8 @@ export default function PriceChart({ symbol }: { symbol: string }) {
           <div className="flex items-center gap-3 ml-auto text-xs">
             {[
               { key: 'ma20', label: 'MA20', color: '#fbbf24' },
-              { key: 'ma50', label: 'MA50', color: '#60a5fa' },
-              { key: 'ma200', label: 'MA200', color: '#a78bfa' },
+              { key: 'ma50', label: 'MA50', color: '#c084fc' },
+              { key: 'ma200', label: 'MA200', color: '#f472b6' },
             ].map(ma => (
               <label key={ma.key} className="flex items-center gap-1 cursor-pointer" style={{ color: 'var(--text-muted)' }}>
                 <input
@@ -221,10 +221,10 @@ export default function PriceChart({ symbol }: { symbol: string }) {
                 <Line type="monotone" dataKey="ma_20" stroke="#fbbf24" strokeWidth={1.5} dot={false} name="MA 20" />
               )}
               {showMA.ma50 && chartData.some(d => d.ma_50) && (
-                <Line type="monotone" dataKey="ma_50" stroke="#60a5fa" strokeWidth={1.5} dot={false} name="MA 50" />
+                <Line type="monotone" dataKey="ma_50" stroke="#c084fc" strokeWidth={1.5} dot={false} name="MA 50" />
               )}
               {showMA.ma200 && chartData.some(d => d.ma_200) && (
-                <Line type="monotone" dataKey="ma_200" stroke="#a78bfa" strokeWidth={1.5} dot={false} name="MA 200" />
+                <Line type="monotone" dataKey="ma_200" stroke="#f472b6" strokeWidth={1.5} dot={false} name="MA 200" />
               )}
             </ComposedChart>
           ) : view === 'volume' ? (

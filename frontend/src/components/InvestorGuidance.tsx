@@ -81,13 +81,13 @@ export default function InvestorGuidance({ direction, confidence, riskLevel, tec
   const longColor = longTerm === 'Constructive' ? '#10b981' : longTerm === 'Cautious' ? '#ef4444' : '#f59e0b';
 
   const profiles = [
-    { icon: Shield, title: 'Conservative Investors', color: '#3b82f6', points: conservative },
+    { icon: Shield, title: 'Conservative Investors', color: '#a855f7', points: conservative },
     { icon: Rocket, title: 'Growth Investors', color: '#10b981', points: growth },
     { icon: Zap, title: 'Active Traders', color: '#f59e0b', points: active },
   ];
 
   return (
-    <div className="rounded-2xl p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
+    <div className="rounded-2xl p-4 sm:p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
       <h3 className="text-lg font-semibold mb-1" style={{ color: 'var(--text-primary)' }}>What This Analysis Means</h3>
       <p className="text-xs mb-5" style={{ color: 'var(--text-dimmed)' }}>Educational guidance by investor type — not personalized advice</p>
 

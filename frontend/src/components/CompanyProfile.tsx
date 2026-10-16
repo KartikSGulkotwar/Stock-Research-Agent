@@ -58,7 +58,7 @@ export default function CompanyProfile({ symbol }: { symbol: string }) {
           <div className="flex-1 min-w-0">
             <h3 className="text-lg font-bold" style={{ color: 'var(--text-primary)' }}>{profile.companyName}</h3>
             <div className="flex flex-wrap gap-2 mt-1">
-              <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: 'rgba(59, 130, 246, 0.15)', color: '#60a5fa', border: '1px solid rgba(59, 130, 246, 0.3)' }}>
+              <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: 'rgba(168, 85, 247, 0.15)', color: '#c084fc', border: '1px solid rgba(168, 85, 247, 0.3)' }}>
                 {profile.sector}
               </span>
               <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: 'var(--bg-badge)', color: 'var(--text-muted)' }}>

@@ -84,7 +84,7 @@ export default function AnalysisResults({ result }: AnalysisResultsProps) {
     <div className="max-w-5xl mx-auto space-y-8">
       {/* Main Direction Card */}
       <div
-        className="rounded-2xl p-6 text-center animate-fadeIn"
+        className="rounded-2xl p-4 sm:p-6 text-center animate-fadeIn"
         style={{ background: 'var(--bg-card)', border: `2px solid ${style.border}` }}
       >
         <div className="flex justify-end gap-2 mb-2 print:hidden">
@@ -180,7 +180,7 @@ export default function AnalysisResults({ result }: AnalysisResultsProps) {
         const holdPct = total > 0 ? (a.hold / total) * 100 : 0;
         const sellPct = total > 0 ? ((a.sell + a.strongSell) / total) * 100 : 0;
         return (
-          <div className="rounded-2xl p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
+          <div className="rounded-2xl p-4 sm:p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
             <div className="flex items-center justify-between mb-1">
               <div className="flex items-center gap-2">
                 <h3 className="text-lg font-semibold" style={{ color: 'var(--text-primary)' }}>Wall Street Analyst Consensus</h3>
@@ -217,7 +217,7 @@ export default function AnalysisResults({ result }: AnalysisResultsProps) {
                 { label: 'Target Low', value: a.targetLow, color: '#ef4444' },
                 { label: 'Median Target', value: a.targetMedian, color: '#f59e0b' },
                 { label: 'Consensus Target', value: a.targetConsensus, color: '#10b981' },
-                { label: 'Target High', value: a.targetHigh, color: '#3b82f6' },
+                { label: 'Target High', value: a.targetHigh, color: '#a855f7' },
               ].map(t => (
                 <div key={t.label} className="text-center">
                   <p className="text-xs" style={{ color: 'var(--text-muted)' }}>{t.label}</p>
@@ -241,7 +241,7 @@ export default function AnalysisResults({ result }: AnalysisResultsProps) {
 
       {/* Risk Considerations */}
       {result.risk_considerations && result.risk_considerations.length > 0 && (
-        <div className="rounded-2xl p-6" style={{ background: 'rgba(239, 68, 68, 0.05)', border: '1px solid rgba(239, 68, 68, 0.2)' }}>
+        <div className="rounded-2xl p-4 sm:p-6" style={{ background: 'rgba(239, 68, 68, 0.05)', border: '1px solid rgba(239, 68, 68, 0.2)' }}>
           <h3 className="text-lg font-semibold mb-3 text-red-400 flex items-center gap-2">
             <AlertTriangle className="w-5 h-5" />
             Risk Considerations

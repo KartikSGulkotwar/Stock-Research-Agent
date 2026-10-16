@@ -42,7 +42,7 @@ export function addNotification(n: Omit<Notification, 'id' | 'timestamp' | 'read
 const ICON_MAP = {
   watchlist: { icon: TrendingUp, color: '#f59e0b' },
   analysis: { icon: Check, color: '#10b981' },
-  portfolio: { icon: TrendingDown, color: '#3b82f6' },
+  portfolio: { icon: TrendingDown, color: '#a855f7' },
   market: { icon: AlertTriangle, color: '#ef4444' },
 };
 

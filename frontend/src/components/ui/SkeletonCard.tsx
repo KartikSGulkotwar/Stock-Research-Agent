@@ -6,7 +6,7 @@ export function SkeletonLine({ width = '100%', height = '12px' }: { width?: stri
 
 export function SkeletonCard() {
   return (
-    <div className="rounded-2xl p-6 space-y-4" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
+    <div className="rounded-2xl p-4 sm:p-6 space-y-4" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
       <div className="flex items-center gap-3">
         <div className="skeleton w-10 h-10 rounded-xl" />
         <div className="flex-1 space-y-2">

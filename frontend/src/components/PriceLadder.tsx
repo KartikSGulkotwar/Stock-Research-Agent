@@ -23,7 +23,7 @@ export default function PriceLadder({ currentPrice: rawPrice, targetPrice, stopL
 
   if (analystTarget && analystTarget !== targetPrice && analystTarget > currentPrice) {
     const pct = ((analystTarget - currentPrice) / currentPrice) * 100;
-    prices.push({ label: 'Analyst Consensus', price: analystTarget, icon: BarChart3, color: '#3b82f6', pct, tag: `+${pct.toFixed(1)}% upside` });
+    prices.push({ label: 'Analyst Consensus', price: analystTarget, icon: BarChart3, color: '#a855f7', pct, tag: `+${pct.toFixed(1)}% upside` });
   }
 
   // Sort targets descending
@@ -52,7 +52,7 @@ export default function PriceLadder({ currentPrice: rawPrice, targetPrice, stopL
   const rrRatio = downside > 0 ? (upside / downside) : 0;
 
   return (
-    <div className="rounded-2xl p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
+    <div className="rounded-2xl p-4 sm:p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
       <div className="flex items-center gap-2 mb-1">
         <h3 className="text-lg font-semibold" style={{ color: 'var(--text-primary)' }}>Price Levels & Targets</h3>
         <InfoTooltip term="Price Levels" brief="Key price points from the analysis including fair value estimates and technical support levels." />

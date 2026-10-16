@@ -38,7 +38,7 @@ const directionColor: Record<string, string> = {
   BUY: 'text-emerald-400', SELL: 'text-red-400', HOLD: 'text-amber-400',
 };
 
-const STOCK_COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444'];
+const STOCK_COLORS = ['#a855f7', '#10b981', '#f59e0b', '#ef4444'];
 
 function getOverallScore(r: CompareResult) {
   return (r.technical_score + r.fundamental_score + r.sentiment_score) / 3;
@@ -117,7 +117,7 @@ export default function CompareMode() {
   return (
     <div className="max-w-5xl mx-auto">
       {/* Input Section */}
-      <div className="rounded-2xl p-6 mb-8" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
+      <div className="rounded-2xl p-4 sm:p-6 mb-8" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
         <h3 className="text-lg font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>Compare Stocks (2-4)</h3>
         <div className="flex flex-wrap gap-3 items-center mb-4">
           {symbols.map((s, i) => (
@@ -127,7 +127,7 @@ export default function CompareMode() {
                 value={s}
                 onChange={e => updateSymbol(i, e.target.value)}
                 placeholder={`Symbol ${i + 1}`}
-                className="w-28 px-3 py-2 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-28 px-3 py-2 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-violet-500"
                 style={{ background: 'var(--bg-input)', border: '1px solid var(--border-color)', color: 'var(--text-primary)' }}
               />
               {symbols.length > 2 && (
@@ -223,7 +223,7 @@ export default function CompareMode() {
           </div>
 
           {/* Radar Chart */}
-          <div className="rounded-2xl p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
+          <div className="rounded-2xl p-4 sm:p-6" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
             <h3 className="text-lg font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>Score Radar</h3>
             <div className="h-80 w-full">
               <ResponsiveContainer width="100%" height="100%">
@@ -257,7 +257,7 @@ export default function CompareMode() {
           </div>
 
           {/* Detailed Comparison Table */}
-          <div className="rounded-2xl p-6 overflow-x-auto" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
+          <div className="rounded-2xl p-4 sm:p-6 overflow-x-auto" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
             <h3 className="text-lg font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>
               <BarChart3 className="w-5 h-5 inline mr-2" style={{ color: 'var(--accent)' }} />
               Detailed Comparison

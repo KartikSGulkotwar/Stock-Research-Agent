@@ -159,17 +159,17 @@ export default function PortfolioTracker() {
     <div className="max-w-5xl mx-auto space-y-6">
       {/* Header */}
       <div
-        className="rounded-2xl p-6"
+        className="rounded-2xl p-4 sm:p-6"
         style={{
           background: 'var(--bg-card)',
           border: '1px solid var(--border-color)',
           boxShadow: '0 4px 24px rgba(0,0,0,0.10)',
         }}
       >
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
           <div className="flex items-center gap-2">
             <Briefcase className="w-6 h-6" style={{ color: 'var(--accent)' }} />
-            <h2 className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>Portfolio Tracker</h2>
+            <h2 className="text-xl sm:text-2xl font-bold whitespace-nowrap" style={{ color: 'var(--text-primary)' }}>Portfolio Tracker</h2>
           </div>
           <div className="flex gap-2">
             <button
@@ -196,14 +196,14 @@ export default function PortfolioTracker() {
         {/* Summary cards with gradient accents */}
         {enriched.length > 0 && (
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            <div className="rounded-xl p-3 text-center relative overflow-hidden" style={{ ...summaryCardStyle('#6366f1', '#8b5cf6') }}>
-              <div style={gradientAccent('#6366f1', '#8b5cf6')} />
+            <div className="rounded-xl p-3 text-center relative overflow-hidden" style={{ ...summaryCardStyle('#7c3aed', '#8b5cf6') }}>
+              <div style={gradientAccent('#7c3aed', '#8b5cf6')} />
               <DollarSign className="w-4 h-4 mx-auto mb-1" style={{ color: 'var(--accent)' }} />
               <p className="text-xs" style={{ color: 'var(--text-muted)' }}>Total Value</p>
               <p className="text-lg font-bold tabular-nums" style={{ color: 'var(--text-primary)' }}>{formatLarge(totals.totalValue)}</p>
             </div>
-            <div className="rounded-xl p-3 text-center relative overflow-hidden" style={{ ...summaryCardStyle('#3b82f6', '#6366f1') }}>
-              <div style={gradientAccent('#3b82f6', '#6366f1')} />
+            <div className="rounded-xl p-3 text-center relative overflow-hidden" style={{ ...summaryCardStyle('#a855f7', '#7c3aed') }}>
+              <div style={gradientAccent('#a855f7', '#7c3aed')} />
               <PieChart className="w-4 h-4 mx-auto mb-1" style={{ color: 'var(--text-muted)' }} />
               <p className="text-xs" style={{ color: 'var(--text-muted)' }}>Total Cost</p>
               <p className="text-lg font-bold tabular-nums" style={{ color: 'var(--text-primary)' }}>{formatLarge(totals.totalCost)}</p>
@@ -231,7 +231,7 @@ export default function PortfolioTracker() {
       {/* Portfolio Insights */}
       {enriched.length > 0 && (
         <div
-          className="rounded-2xl p-6"
+          className="rounded-2xl p-4 sm:p-6"
           style={{
             background: 'var(--bg-card)',
             border: '1px solid var(--border-color)',
@@ -246,7 +246,7 @@ export default function PortfolioTracker() {
             {/* Largest Position */}
             <div className="rounded-xl p-3" style={{ background: 'var(--bg-input)', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
               <div className="flex items-center gap-1.5 mb-2">
-                <Target className="w-3.5 h-3.5" style={{ color: '#6366f1' }} />
+                <Target className="w-3.5 h-3.5" style={{ color: '#7c3aed' }} />
                 <span className="text-xs" style={{ color: 'var(--text-muted)' }}>Largest Position</span>
               </div>
               {largestPosition && (
@@ -307,7 +307,7 @@ export default function PortfolioTracker() {
       {/* Add Position Form */}
       {showAdd && (
         <div
-          className="rounded-2xl p-6"
+          className="rounded-2xl p-4 sm:p-6"
           style={{
             background: 'var(--bg-card)',
             border: '1px solid var(--accent)',
@@ -429,7 +429,7 @@ export default function PortfolioTracker() {
 
           {/* Allocation View */}
           <div
-            className="rounded-2xl p-6"
+            className="rounded-2xl p-4 sm:p-6"
             style={{
               background: 'var(--bg-card)',
               border: '1px solid var(--border-color)',
