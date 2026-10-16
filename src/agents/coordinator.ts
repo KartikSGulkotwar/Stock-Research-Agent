@@ -101,12 +101,12 @@ Return ONLY JSON:
 }`;
 
     const message = await this.claude.messages.create({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-5',
       max_tokens: 2048,
       messages: [{ role: 'user', content: prompt }],
     });
 
-    const text = message.content[0].type === 'text' ? message.content[0].text : '';
+    const text = message.content.map((b) => (b.type === 'text' ? b.text : '')).join('');
     const jsonMatch = text.match(/\{[\s\S]*\}/);
     const rec = jsonMatch ? JSON.parse(jsonMatch[0]) : {
       analysis_direction: 'neutral',

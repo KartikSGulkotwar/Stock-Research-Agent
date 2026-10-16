@@ -22,12 +22,12 @@ export class SentimentAnalyzerAgent {
     const prompt = 'Analyze sentiment for ' + symbol + ':\n\nHEADLINES:\n' + lines + '\n\nReturn ONLY JSON:\n{"score": number (0-100), "overall_sentiment": "positive" or "negative" or "neutral", "news_count": ' + news.length + ', "positive_count": number, "negative_count": number, "neutral_count": number, "key_topics": ["topic1"], "summary": "brief summary"}';
 
     const message = await this.claude.messages.create({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-5',
       max_tokens: 1024,
       messages: [{ role: 'user', content: prompt }],
     });
 
-    const text = message.content[0].type === 'text' ? message.content[0].text : '';
+    const text = message.content.map((b) => (b.type === 'text' ? b.text : '')).join('');
     const jsonMatch = text.match(/\{[\s\S]*\}/);
     const analysis: SentimentAnalysis = jsonMatch ? JSON.parse(jsonMatch[0]) : {
       score: 50,
