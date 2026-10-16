@@ -6,6 +6,7 @@
 :root,
 [data-theme="default"] {
   --bg-page: linear-gradient(to bottom right, #120a24, #4c1d95, #120a24);
+  --bg-solid: #120a24;
   --bg-card: rgba(39, 26, 66, 0.6);
   --bg-card-hover: rgba(39, 26, 66, 0.8);
   --bg-input: rgba(62, 45, 98, 0.8);
@@ -35,6 +36,7 @@
 /* Dark theme (pure dark) */
 [data-theme="dark"] {
   --bg-page: #0a0a0a;
+  --bg-solid: #0a0a0a;
   --bg-card: #141414;
   --bg-card-hover: #1a1a1a;
   --bg-input: #1e1e1e;
@@ -64,6 +66,7 @@
 /* Light theme (off-white) */
 [data-theme="light"] {
   --bg-page: #f5f3ef;
+  --bg-solid: #f5f3ef;
   --bg-card: #ffffff;
   --bg-card-hover: #fafaf8;
   --bg-input: #f0ede8;
@@ -398,7 +401,10 @@ button, a, input, select {
 }
 
 /* ===== RESPONSIVE ===== */
+/* Solid color behind the page: iOS shows this when you over-scroll (rubber-band)
+   past the top or bottom; gradients on body don't paint there. */
 html {
+  background-color: var(--bg-solid);
   -webkit-text-size-adjust: 100%;
   overflow-x: hidden;
 }

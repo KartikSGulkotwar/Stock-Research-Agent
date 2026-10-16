@@ -26,6 +26,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (!mounted) return;
     document.documentElement.setAttribute('data-theme', theme);
+    // Keep the iOS status bar / Safari toolbar tint in sync with the theme
+    const solid = getComputedStyle(document.documentElement).getPropertyValue('--bg-solid').trim();
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', solid);
     localStorage.setItem('theme', theme);
   }, [theme, mounted]);
 
