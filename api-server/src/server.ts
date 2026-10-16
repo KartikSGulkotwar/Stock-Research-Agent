@@ -335,6 +335,11 @@ app.post('/api/screener', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 API on http://localhost:${PORT}`);
-});
+// On Vercel the app is served as a function (see api/index.ts), so only listen locally
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`🚀 API on http://localhost:${PORT}`);
+  });
+}
+
+export default app;

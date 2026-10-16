@@ -14,3 +14,4 @@ frontend/out/
 .claude/
 resume-output/
 *.tsbuildinfo
+.vercel
